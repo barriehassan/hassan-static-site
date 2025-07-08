@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Hassan Barrie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'electric-blue': '#3b82f6',
+                        'neon-green': '#10b981',
+                        'bright-purple': '#8b5cf6',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'wave': 'wave 2s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-white">
+                    <a href="index.html">Hassan <span class="text-electric-blue">Barrie</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">About & Skills</a>
+                    <a href="education.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Education</a>
+                    <a href="projects.html" class="nav-link active px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Projects</a>
+                    <a href="contact.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-electric-blue transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-800 hidden">
+                <div class="flex flex-col space-y-2 pt-4">
+                    <a href="index.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">About & Skills</a>
+                    <a href="education.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Education</a>
+                    <a href="projects.html" class="nav-link active px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Projects</a>
+                    <a href="contact.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="pt-24 pb-20 bg-gray-800 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800"></div>
+        <div class="absolute top-20 left-20 w-72 h-72 bg-electric-blue/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-bright-purple/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16 fade-in-up">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-white mb-4">
+                        My <span class="bg-gradient-to-r from-electric-blue to-neon-green bg-clip-text text-transparent">Projects</span>
+                    </h1>
+                    <div class="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto rounded-full"></div>
+                    <p class="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
+                        Explore my latest projects and practice work, showcasing my skills in web development and software engineering.
+                    </p>
+                </div>
+
+                <!-- Search and Filter Controls -->
+                <div class="mb-12 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                        <!-- Search Bar -->
+                        <div class="relative flex-grow max-w-md">
+                            <input 
+                                type="text" 
+                                id="search-input"
+                                placeholder="Search projects..." 
+                                class="w-full px-4 py-3 pl-12 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-electric-blue focus:ring-2 focus:ring-electric-blue/20 transition-all duration-300"
+                            >
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+
+                        <!-- Filter Buttons -->
+                        <div class="flex flex-wrap gap-2">
+                            <button class="filter-btn active px-4 py-2 bg-electric-blue text-white rounded-lg hover:bg-electric-blue/80 transition-all duration-300" data-filter="all">
+                                All Projects
+                            </button>
+                            <button class="filter-btn px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300" data-filter="web">
+                                Web Development
+                            </button>
+                            <button class="filter-btn px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300" data-filter="mobile">
+                                Mobile Apps
+                            </button>
+                            <button class="filter-btn px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300" data-filter="design">
+                                Design
+                            </button>
+                            <button class="filter-btn px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300" data-filter="completed">
+                                Completed
+                            </button>
+                            <button class="filter-btn px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300" data-filter="progress">
+                                In Progress
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Results Count -->
+                    <div class="mt-4">
+                        <p id="results-count" class="text-gray-400">Showing <span id="visible-count">0</span> of <span id="total-count">0</span> projects</p>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-title="Personal Portfolio Website" data-category="web design" data-status="progress" data-tech="react tailwind javascript">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/1e40af/ffffff?text=Portfolio+Website" alt="Personal Portfolio Website" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-current flex items-center">
+                                    <i class="fas fa-clock mr-1"></i>
+                                    In Progress
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">Personal Portfolio Website</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">A modern, responsive portfolio website showcasing my skills and projects with stunning animations and interactive elements.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">React</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Tailwind CSS</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">JavaScript</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Project
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-github mr-2"></i>
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-title="Django E-Learning Platform" data-category="web" data-status="completed" data-tech="python django mysql">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/059669/ffffff?text=Django+Platform" alt="Django E-Learning Platform" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                    <i class="fas fa-check-circle mr-1"></i>
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">Django E-Learning Platform</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">A comprehensive e-learning platform built with Django, featuring user authentication, course management, and progress tracking.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Python</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Django</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">MySQL</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Project
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-github mr-2"></i>
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-title="E-commerce Platform" data-category="web" data-status="progress" data-tech="python django bootstrap mysql">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 0.4s;">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/7c3aed/ffffff?text=E-commerce+Platform" alt="E-commerce Platform" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-coming-soon flex items-center">
+                                    <i class="fas fa-exclamation-circle mr-1"></i>
+                                    Coming Soon
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">E-commerce Platform</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Python</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Django</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Bootstrap</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">MySQL</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Project
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-github mr-2"></i>
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-title="Mobile App UI Design" data-category="mobile design" data-status="completed" data-tech="figma adobe-xd illustrator">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 0.6s;">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/dc2626/ffffff?text=Mobile+App+Design" alt="Mobile App UI Design" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                    <i class="fas fa-check-circle mr-1"></i>
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">Mobile App UI Design</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">Modern mobile application design with intuitive user interface and smooth user experience patterns.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Figma</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Adobe XD</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Illustrator</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Design
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-figma mr-2"></i>
+                                        Prototype
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-title="JavaScript Calculator" data-category="web" data-status="completed" data-tech="javascript html css">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 0.8s;">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=JS+Calculator" alt="JavaScript Calculator" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                    <i class="fas fa-check-circle mr-1"></i>
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">JavaScript Calculator</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">A fully functional calculator built with vanilla JavaScript, featuring advanced mathematical operations and responsive design.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">JavaScript</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">HTML</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">CSS</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Project
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-github mr-2"></i>
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-title="Task Management App" data-category="web mobile" data-status="progress" data-tech="react nodejs mongodb">
+                        <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 1s;">
+                            <div class="relative overflow-hidden">
+                                <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Task+Manager" alt="Task Management App" class="project-image w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-current flex items-center">
+                                    <i class="fas fa-clock mr-1"></i>
+                                    In Progress
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">Task Management App</h3>
+                                <p class="text-gray-300 mb-4 leading-relaxed">A collaborative task management application with real-time updates, team features, and progress tracking.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">React</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">Node.js</span>
+                                    <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm hover:bg-electric-blue/20 hover:text-electric-blue transition-colors duration-300">MongoDB</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="flex items-center px-4 py-2 bg-electric-blue/20 text-electric-blue rounded-lg hover:bg-electric-blue hover:text-white transition-all duration-300 hover:scale-105">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Project
+                                    </button>
+                                    <button class="flex items-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-neon-green/20 hover:text-neon-green transition-all duration-300 hover:scale-105">
+                                        <i class="fab fa-github mr-2"></i>
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div id="no-results" class="text-center py-16 hidden">
+                    <div class="text-6xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">No Projects Found</h3>
+                    <p class="text-gray-400">Try adjusting your search terms or filters.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center mt-16 fade-in-up" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-6 text-lg">
+                        Interested in working together? Let's build something amazing!
+                    </p>
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-electric-blue to-neon-green text-white font-semibold rounded-lg hover:scale-105 transform transition-all duration-300 hover:shadow-2xl hover:shadow-electric-blue/50">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">© 2024 Hassan Barrie. All rights reserved.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-electric-blue transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-green transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-bright-purple transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

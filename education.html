@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Hassan Barrie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'electric-blue': '#3b82f6',
+                        'neon-green': '#10b981',
+                        'bright-purple': '#8b5cf6',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'wave': 'wave 2s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-white">
+                    <a href="index.html">Hassan <span class="text-electric-blue">Barrie</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">About & Skills</a>
+                    <a href="education.html" class="nav-link active px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Education</a>
+                    <a href="projects.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Projects</a>
+                    <a href="contact.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:text-electric-blue hover:bg-gray-800 text-gray-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-electric-blue transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-800 hidden">
+                <div class="flex flex-col space-y-2 pt-4">
+                    <a href="index.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">About & Skills</a>
+                    <a href="education.html" class="nav-link active px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Education</a>
+                    <a href="projects.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Projects</a>
+                    <a href="contact.html" class="nav-link px-3 py-2 rounded-lg font-medium transition-all duration-300 text-left hover:text-electric-blue hover:bg-gray-800 text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Section -->
+    <section class="pt-24 pb-20 bg-gray-900 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-neon-green/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-bright-purple/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16 fade-in-up">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-white mb-4">
+                        Education <span class="bg-gradient-to-r from-electric-blue to-neon-green bg-clip-text text-transparent">Timeline</span>
+                    </h1>
+                    <div class="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto rounded-full"></div>
+                    <p class="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
+                        My educational journey from early childhood through university, shaping my passion for technology and software engineering.
+                    </p>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line hidden lg:block"></div>
+
+                    <!-- Education Items -->
+                    <div class="space-y-12">
+                        <!-- Limkokwing University -->
+                        <div class="relative flex items-center lg:flex-row">
+                            <div class="timeline-dot hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pr-12 fade-in-up">
+                                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105">
+                                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-current flex items-center">
+                                        <div class="pulse-dot mr-2"></div>
+                                        Current
+                                    </div>
+                                    <div class="mb-6">
+                                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                                            <i class="fas fa-graduation-cap mr-3 text-electric-blue text-3xl"></i>
+                                            Limkokwing University of Creative Technology
+                                        </h3>
+                                        <p class="text-electric-blue font-semibold text-lg mb-2">Bachelor of Software Engineering</p>
+                                        <div class="flex items-center text-gray-400 space-x-6 mb-4">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-calendar mr-2"></i>
+                                                2022 - 2026
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                                Sierra Leone
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Pursuing comprehensive software engineering education with focus on modern development practices and technologies. The program covers full-stack development, database design, software architecture, and project management.
+                                    </p>
+                                    
+                                    <!-- Key Subjects -->
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-semibold text-white mb-3">Key Subjects</h4>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-code mr-2 text-electric-blue"></i>
+                                                Programming Fundamentals
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-database mr-2 text-electric-blue"></i>
+                                                Database Systems
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-globe mr-2 text-electric-blue"></i>
+                                                Web Development
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-cogs mr-2 text-electric-blue"></i>
+                                                Software Engineering
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Progress Bar -->
+                                    <div class="mb-4">
+                                        <div class="flex justify-between items-center mb-2">
+                                            <span class="text-gray-300 font-medium">Progress</span>
+                                            <span class="text-electric-blue font-bold">60%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                            <div class="h-full bg-gradient-to-r from-electric-blue to-neon-green rounded-full transition-all duration-1000 ease-out" style="width: 60%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Holy Trinity Senior Secondary -->
+                        <div class="relative flex items-center lg:flex-row-reverse">
+                            <div class="timeline-dot hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pl-12 fade-in-up" style="animation-delay: 0.2s;">
+                                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105">
+                                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                        <i class="fas fa-check-circle mr-1"></i>
+                                        Completed
+                                    </div>
+                                    <div class="mb-6">
+                                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                                            <i class="fas fa-school mr-3 text-neon-green text-3xl"></i>
+                                            Holy Trinity Senior Secondary School
+                                        </h3>
+                                        <p class="text-neon-green font-semibold text-lg mb-2">Senior Secondary Certificate</p>
+                                        <div class="flex items-center text-gray-400 space-x-6 mb-4">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-calendar mr-2"></i>
+                                                2016 - 2019
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                                Sierra Leone
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Completed secondary education with strong performance in mathematics and sciences. This foundation laid the groundwork for my interest in technology and logical problem-solving.
+                                    </p>
+                                    
+                                    <!-- Key Subjects -->
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-semibold text-white mb-3">Key Subjects</h4>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-calculator mr-2 text-neon-green"></i>
+                                                Mathematics
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-atom mr-2 text-neon-green"></i>
+                                                Physics
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-flask mr-2 text-neon-green"></i>
+                                                Chemistry
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-book mr-2 text-neon-green"></i>
+                                                English
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Achievement -->
+                                    <div class="bg-gray-800/50 p-4 rounded-lg">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-trophy text-yellow-400 mr-3"></i>
+                                            <span class="text-gray-300">Strong performance in STEM subjects</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Henritta Junior School -->
+                        <div class="relative flex items-center lg:flex-row">
+                            <div class="timeline-dot hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pr-12 fade-in-up" style="animation-delay: 0.4s;">
+                                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105">
+                                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                        <i class="fas fa-check-circle mr-1"></i>
+                                        Completed
+                                    </div>
+                                    <div class="mb-6">
+                                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                                            <i class="fas fa-building mr-3 text-bright-purple text-3xl"></i>
+                                            Henritta Junior School
+                                        </h3>
+                                        <p class="text-bright-purple font-semibold text-lg mb-2">Junior Secondary Certificate</p>
+                                        <div class="flex items-center text-gray-400 space-x-6 mb-4">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-calendar mr-2"></i>
+                                                2012 - 2015
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                                Sierra Leone
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Foundation education with early interest in technology and problem-solving. This is where my curiosity about how things work began to develop.
+                                    </p>
+                                    
+                                    <!-- Key Areas -->
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-semibold text-white mb-3">Focus Areas</h4>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-pencil-alt mr-2 text-bright-purple"></i>
+                                                Basic Mathematics
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-book-open mr-2 text-bright-purple"></i>
+                                                English Language
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-microscope mr-2 text-bright-purple"></i>
+                                                Basic Sciences
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-users mr-2 text-bright-purple"></i>
+                                                Social Studies
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Henritta Nursery -->
+                        <div class="relative flex items-center lg:flex-row-reverse">
+                            <div class="timeline-dot hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pl-12 fade-in-up" style="animation-delay: 0.6s;">
+                                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 transform hover:scale-105">
+                                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold status-completed flex items-center">
+                                        <i class="fas fa-check-circle mr-1"></i>
+                                        Completed
+                                    </div>
+                                    <div class="mb-6">
+                                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                                            <i class="fas fa-child mr-3 text-electric-blue text-3xl"></i>
+                                            Henritta Nursery School
+                                        </h3>
+                                        <p class="text-electric-blue font-semibold text-lg mb-2">Primary Education</p>
+                                        <div class="flex items-center text-gray-400 space-x-6 mb-4">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-calendar mr-2"></i>
+                                                2004 - 2012
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                                Sierra Leone
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Early childhood education building fundamental learning skills. The beginning of my educational journey that would eventually lead to my passion for technology.
+                                    </p>
+                                    
+                                    <!-- Foundation Skills -->
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-semibold text-white mb-3">Foundation Skills</h4>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-spell-check mr-2 text-electric-blue"></i>
+                                                Reading & Writing
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-plus mr-2 text-electric-blue"></i>
+                                                Basic Arithmetic
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-puzzle-piece mr-2 text-electric-blue"></i>
+                                                Problem Solving
+                                            </div>
+                                            <div class="flex items-center text-gray-300 text-sm">
+                                                <i class="fas fa-handshake mr-2 text-electric-blue"></i>
+                                                Social Skills
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Stats -->
+                <div class="mt-20 fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-white mb-4">Educational Journey Stats</h2>
+                        <div class="w-16 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 hover:scale-105 text-center">
+                            <div class="text-4xl font-bold text-electric-blue mb-2">20+</div>
+                            <div class="text-gray-400">Years of Education</div>
+                        </div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-neon-green/50 transition-all duration-300 hover:scale-105 text-center">
+                            <div class="text-4xl font-bold text-neon-green mb-2">4</div>
+                            <div class="text-gray-400">Institutions</div>
+                        </div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-bright-purple/50 transition-all duration-300 hover:scale-105 text-center">
+                            <div class="text-4xl font-bold text-bright-purple mb-2">50+</div>
+                            <div class="text-gray-400">Subjects Studied</div>
+                        </div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 hover:scale-105 text-center">
+                            <div class="text-4xl font-bold text-electric-blue mb-2">1</div>
+                            <div class="text-gray-400">Passion Discovered</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation to Next Section -->
+                <div class="text-center mt-16 fade-in-up" style="animation-delay: 1s;">
+                    <p class="text-gray-300 mb-6 text-lg">
+                        Ready to see how I apply my knowledge in real projects?
+                    </p>
+                    <a href="projects.html" class="px-8 py-4 bg-gradient-to-r from-electric-blue to-neon-green text-white font-semibold rounded-lg hover:scale-105 transform transition-all duration-300 hover:shadow-2xl hover:shadow-electric-blue/50">
+                        View My Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">© 2024 Hassan Barrie. All rights reserved.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-electric-blue transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-green transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-bright-purple transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
